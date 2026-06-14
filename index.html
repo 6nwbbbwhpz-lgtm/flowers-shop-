@@ -112,14 +112,19 @@
     <script>
         const myPhoneNumber = "79280126881"; 
 
-        // Ваши загруженные фотографии (без дубликатов)
+        // Ваши загруженные фотографии
         const uploadedPhotos = [
             "PHOTO-2025-06-07-00-47-47.jpeg",
             "PHOTO-2025-06-07-00-54-49.jpeg",
             "PHOTO-2025-06-07-01-03-23.jpeg",
             "PHOTO-2025-06-26-23-37-17.jpeg",
             "PHOTO-2025-06-26-23-37-26.jpeg",
-            "PHOTO-2025-06-29-01-24-00.jpeg",
+            "PHOTO-2025-06-29-01-24-00 5.jpeg",
+            "PHOTO-2025-06-29-01-24-00 6.jpeg",
+            "PHOTO-2025-06-29-01-24-00 7.jpeg",
+            "PHOTO-2025-06-29-01-24-01 2.jpeg",
+            "PHOTO-2025-06-29-01-24-01 3.jpeg",
+            "PHOTO-2025-06-29-01-24-01 4.jpeg",
             "PHOTO-2025-06-29-01-24-01.jpeg",
             "PHOTO-2025-06-29-16-03-20.jpeg",
             "PHOTO-2025-06-29-16-04-06.jpeg",
@@ -134,25 +139,33 @@
             "PHOTO-2025-07-06-22-17-39.jpeg",
             "PHOTO-2025-07-08-18-00-15.jpeg",
             "PHOTO-2025-07-12-21-35-36.jpeg",
-            "PHOTO-2025-07-13-17-43-49.jpeg",
+            "PHOTO-2025-07-13-17-43-49 2.jpeg",
+            "PHOTO-2025-07-13-17-43-49 3.jpeg",
+            "PHOTO-2025-07-13-17-43-49 4.jpeg",
+            "PHOTO-2025-07-13-18-29-54 2.jpeg",
             "PHOTO-2025-07-13-18-29-54.jpeg",
+            "PHOTO-2025-07-13-21-46-44 2.jpeg",
+            "PHOTO-2025-07-13-21-46-44 3.jpeg",
+            "PHOTO-2025-07-13-21-46-44 4.jpeg",
+            "PHOTO-2025-07-13-21-46-44 5.jpeg",
             "PHOTO-2025-07-13-21-46-44.jpeg",
             "PHOTO-2025-07-13-21-47-25.jpeg",
+            "PHOTO-2025-07-16-15-25-04 2.jpeg",
             "PHOTO-2025-07-16-15-25-04.jpeg",
             "jessie-daniella-QLuleNy8LMM-unsplash.jpeg"
         ];
 
-        // Генерируем каталог товаров
+        // Генерируем каталог на 55 товаров
         const products = [];
         const baseUrl = "https://raw.githubusercontent.com/6nwbbbwhpz-lgtm/----/main/";
         
-        for (let i = 1; i <= uploadedPhotos.length; i++) {
+        for (let i = 1; i <= 55; i++) {
             let defaultPrice = 2500;
             if (i % 3 === 0) defaultPrice = 3200;
             else if (i % 5 === 0) defaultPrice = 4500;
             else if (i % 7 === 0) defaultPrice = 1800;
 
-            let fileName = uploadedPhotos[i - 1];
+            let fileName = uploadedPhotos[i % uploadedPhotos.length];
             let fullUrl = baseUrl + encodeURI(fileName);
 
             products.push({
