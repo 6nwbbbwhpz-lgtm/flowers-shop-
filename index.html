@@ -160,10 +160,10 @@
         const baseUrl = "https://raw.githubusercontent.com/6nwbbbwhpz-lgtm/----/main/";
         
         for (let i = 1; i <= 55; i++) {
-            let defaultPrice = 9999;
-            if (i % 3 === 0) defaultPrice = 5800
-            else if (i % 5 === 0) defaultPrice = 4500;
-            else if (i % 7 === 0) defaultPrice = 999;
+            let defaultPrice = ;
+            if (i % 3 === 0) defaultPrice = 
+            else if (i % 5 === 0) defaultPrice = ;
+            else if (i % 7 === 0) defaultPrice = ;
 
             let fileName = uploadedPhotos[i % uploadedPhotos.length];
             let fullUrl = baseUrl + encodeURI(fileName);
@@ -203,7 +203,7 @@
             const cartItemsEl = document.getElementById('cart-items');
             const cartTotalEl = document.getElementById('cart-total');
             if (cart.length === 0) {
-                cartItemsEl.innerHTML = '<p style="color: #888; font-style: italic; margin: 0;">Корзина пуста.</p>';
+                cartItemsEl.innerHTML = '<p style="color: #; font-style: italic; margin: 0;">Корзина пуста.</p>';
                 cartTotalEl.innerText = 'Итого: 0 руб.';
                 return;
             }
